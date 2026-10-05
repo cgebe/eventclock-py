@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: 'If you use this software, please cite the paper and the original R package.'
+type: software
+license: MIT
+title: 'eventclock-py: Python port of the eventclock R package'
+version: 0.1.0.dev0
+abstract: 'Python port of the R package eventclock. It measures information arrival
+  ("event-clock time") ahead of scheduled events from traded event state prices such
+  as prediction market contracts.'
+authors:
+- name: Christoph Gebendorfer
+repository-code: https://github.com/cgebe/eventclock-py
+preferred-citation:
+  type: unpublished
+  title: 'Learning Before Scheduled Events: Prediction Markets, State Prices, and
+    Option Valuation'
+  authors:
+  - family-names: Hanke
+    given-names: Michael
+  - family-names: Schadner
+    given-names: Wolfgang
+  - family-names: Stöckl
+    given-names: Sebastian
+    email: sebastian.stoeckl@uni.li
+    orcid: https://orcid.org/0000-0002-4196-6093
+  - family-names: Weissensteiner
+    given-names: Alex
+  year: '2026'
+  notes: Working Paper
+references:
+- type: software
+  title: 'eventclock: The Event Clock: Information Time from Traded Event State Prices'
+  authors:
+  - family-names: Stöckl
+    given-names: Sebastian
+    email: sebastian.stoeckl@uni.li
+    orcid: https://orcid.org/0000-0002-4196-6093
+  year: '2026'
+  notes: R package, commit 30781dd48a691dbdb253b6c10463e3b2d1731aed
+  url: https://github.com/sstoeckl/eventclock
