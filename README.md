@@ -57,8 +57,12 @@ res = event_clock(ep, from_=dt.date(2016, 5, 24), to=horizons)
 | `ec_simulate_path` | `ec_simulate_path` | `transition` |
 | datasets | `load_dataset(name)` | `datasets` |
 
-Datasets: `brexit2016`, `us2016`, `polymarket2024`, `djt2024`, `fomc_meetings`.
-All five come from the R package. `tools/export_data.R` converts them to parquet without changes.
+Datasets from the R package: `brexit2016`, `us2016`, `polymarket2024`, `djt2024`, `fomc_meetings`.
+`tools/export_data.R` converts them to parquet without changes.
+
+Dataset only in this port: `pipr_bins`. It holds FOMC rate-decision probabilities per bin
+(`q_m50`, `q_m25`, `q_0`, `q_p25`) at UTC timestamps, extracted from blockchain data.
+It is not in the R package.
 
 Not in the port yet:
 

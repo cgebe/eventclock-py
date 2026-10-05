@@ -10,6 +10,10 @@ SHAPES = {
     "brexit2016": (119, ["date", "q_remain", "q_leave"]),
     "djt2024": (126, ["date", "close", "adjusted", "volume"]),
     "fomc_meetings": (56, ["decision_date", "year", "sep"]),
+    "pipr_bins": (
+        79084,
+        ["time", "q_m50", "q_m25", "q_0", "q_p25", "q_raw_sum", "staleness_sec", "quality_flags"],
+    ),
     "polymarket2024": (3791, ["time", "q"]),
     "us2016": (
         237,
@@ -40,7 +44,6 @@ def test_fomc_calendar_is_consistent():
     assert dt.date(2026, 9, 16) in dates
     sep24 = df.loc[(df["year"] == 2024) & df["sep"], "decision_date"]
     assert [d.strftime("%m") for d in sep24] == ["03", "06", "09", "12"]
-
 
 @pytest.mark.parametrize("name", sorted(SHAPES))
 def test_shape_and_columns(name):
